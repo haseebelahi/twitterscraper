@@ -1,12 +1,32 @@
-Synopsis
-========
-
-|Downloads|
+|Downloads| |Downloads_month| |PyPI version| |GitHub contributors|
 
 .. |Downloads| image:: https://pepy.tech/badge/twitterscraper
    :target: https://pepy.tech/project/twitterscraper
+.. |Downloads_month| image:: https://pepy.tech/badge/twitterscraper/month
+   :target: https://pepy.tech/project/twitterscraper/month
+.. |PyPI version| image:: https://badge.fury.io/py/twitterscraper.svg
+   :target: https://badge.fury.io/py/twitterscraper
+.. |GitHub contributors| image:: https://img.shields.io/github/contributors/taspinar/twitterscraper.svg
+   :target: https://github.com/taspinar/twitterscraper/graphs/contributors
 
 
+Backers
+========
+
+Thank you to all our backers! 🙏 [`Become a backer`_]
+
+Sponsors
+========
+
+Support this project by becoming a sponsor. Your logo will show up here
+with a link to your website. [`Become a sponsor`_]
+
+.. _Become a backer: https://opencollective.com/twitterscraper#backer
+.. _Become a sponsor: https://opencollective.com/twitterscraper#sponsor
+
+
+Synopsis
+========
 
 A simple script to scrape for Tweets using the Python package requests
 to retrieve the content and Beautifulsoup4 to parse the retrieved
