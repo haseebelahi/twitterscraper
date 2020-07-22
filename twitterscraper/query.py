@@ -1,19 +1,22 @@
 from __future__ import division
 
-import json
-import requests
-import urllib
-import random
 import datetime as dt
-
+import json
+import logging
+import random
+import sys
+import urllib
 from functools import partial
-from billiard.pool import Pool
-from bs4 import BeautifulSoup
 from itertools import cycle
 
+import requests
+from billiard.pool import Pool
+from bs4 import BeautifulSoup
+
 from twitterscraper.tweet import Tweet
-from twitterscraper.ts_logger import logger
 from twitterscraper.user import User
+
+logger = logging.getLogger('twitterscraper')
 
 #from fake_useragent import UserAgent
 #ua = UserAgent()
@@ -26,7 +29,7 @@ HEADERS_LIST = [
     'Mozilla/5.0 (Windows NT 5.2; RW; rv:7.0a1) Gecko/20091211 SeaMonkey/9.23a1pre'
 ]
 
-HEADER = {'User-Agent': random.choice(HEADERS_LIST)}
+HEADER = {'User-Agent': random.choice(HEADERS_LIST), 'X-Requested-With': 'XMLHttpRequest'}
 logger.info(HEADER)
 
 INIT_URL = 'https://twitter.com/search?f=tweets&vertical=default&q={q}&l={lang}'
